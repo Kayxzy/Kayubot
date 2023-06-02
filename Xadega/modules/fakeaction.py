@@ -12,15 +12,6 @@ from Xadega.utils.misc import *
 
 commands = {
     "ftyping": enums.ChatAction.TYPING,
-    "fvideo": enums.ChatAction.RECORD_VIDEO,
-    "faudio": enums.ChatAction.RECORD_AUDIO,
-    "fround": enums.ChatAction.RECORD_VIDEO_NOTE,
-    "fphoto": enums.ChatAction.UPLOAD_PHOTO,
-    "fsticker": enums.ChatAction.CHOOSE_STICKER,
-    "fdocument": enums.ChatAction.UPLOAD_DOCUMENT,
-    "flocation": enums.ChatAction.FIND_LOCATION,
-    "fgame": enums.ChatAction.PLAYING,
-    "fcontact": enums.ChatAction.CHOOSE_CONTACT,
     "fstop": enums.ChatAction.CANCEL,
     "fscreen": "screenshot",
 }
@@ -48,7 +39,7 @@ async def fakeactions_handler(client, message: Message):
                 )
         else:
             for _ in range(sec if sec else 1):
-                await client.send(
+                await client.send
                     functions.messages.SendScreenshotNotification(
                         peer=await client.resolve_peer(message.chat.id),
                         reply_to_msg_id=0,
@@ -68,43 +59,6 @@ add_command_help(
     "fakeaction",
     [
         ["ftyping [detik]", "Menampilkan Pengetikan Palsu dalam obrolan."],
-        ["fgame [detik]", "Menampilkan sedang bermain game Palsu dalam obrolan."],
-        [
-            "faudio [detik]",
-            "Menampilkan tindakan merekam suara palsu dalam obrolan.",
-        ],
-        [
-            "fvideo [detik]",
-            "Menampilkan tindakan merekam video palsu dalam obrolan.",
-        ],
-        [
-            "fround [detik]",
-            "Menampilkan tindakan merekam video palsu dalam obrolan.",
-        ],
-        [
-            "fphoto [detik]",
-            "Menampilkan tindakan mengirim foto palsu dalam obrolan.",
-        ],
-        [
-            "fsticker [detik]",
-            "Menampilkan tindakan memilih Sticker palsu dalam obrolan.",
-        ],
-        [
-            "fcontact [detik]",
-            "Menampilkan tindakan Share Contact palsu dalam obrolan.",
-        ],
-        [
-            "flocation [detik]",
-            "Menampilkan tindakan Share Lokasi palsu dalam obrolan.",
-        ],
-        [
-            "fdocument [detik]",
-            "Menampilkan tindakan tengirim Document/File palsu dalam obrolan.",
-        ],
-        [
-            "fscreen [jumlah]",
-            "Menampilkan tindakan screenshot palsu. (Gunakan di Obrolan Pribadi)",
-        ],
         ["fstop", "Memberhentikan tindakan palsu dalam obrolan."],
     ],
 )
