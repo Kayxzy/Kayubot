@@ -18,7 +18,7 @@ commands = {
 
 
 @ubot.on_message(filters.command(list(commands), PREFIX) & filters.me)
-async def fakeactions_handler(client, message: Message):
+async def _(client, message: Message):
     cmd = message.command[0]
     try:
         sec = int(message.command[1])
