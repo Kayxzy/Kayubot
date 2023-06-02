@@ -13,9 +13,7 @@ from Xadega.utils.misc import *
 commands = {
     "ftyping": enums.ChatAction.TYPING,
     "fstop": enums.ChatAction.CANCEL,
-    "fscreen": "screenshot",
-}
-
+}   
 
 @ubot.on_message(filters.command(list(commands), PREFIX) & filters.me)
 async def _(client, message: Message):
@@ -36,15 +34,6 @@ async def _(client, message: Message):
             else:
                 return await client.send_chat_action(
                     chat_id=message.chat.id, action=action
-                )
-        else:
-            for _ in range(sec if sec else 1):
-                await client.send(
-                    functions.messages.SendScreenshotNotification(
-                        peer=await client.resolve_peer(message.chat.id),
-                        reply_to_msg_id=0,
-                        random_id=client.rnd_id(),
-                    )
                 )
                 await sleep(0.1)
     except Exception as e:
