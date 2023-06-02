@@ -6,7 +6,7 @@ from pyrogram.types import Message
  
 from Xadega import ubot
 from Xadega.config import *
-from Xadega.helpers.helpers import ReplyCheck 
+from Xadega.helpers.PyroHelpers import ReplyCheck 
   
 from Xadega.modules.bot import add_command_help
   
