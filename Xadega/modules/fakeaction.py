@@ -5,7 +5,7 @@ from asyncio import sleep
  from pyrogram.types import Message 
   
  from config import CMD_HANDLER as cmd 
- from otanproject.helpers.PyroHelpers import ReplyCheck 
+ from Xadega.helpers.PyroHelpers import ReplyCheck 
   
  from .help import add_command_help 
   
