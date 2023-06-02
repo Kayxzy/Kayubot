@@ -3,11 +3,12 @@ from asyncio import sleep
  from pyrogram import Client, enums, filters 
  from pyrogram.raw import functions 
  from pyrogram.types import Message 
-  
- from config import CMD_HANDLER as cmd 
+ 
+ from Xadega import ubot
+ from Xadega.config import *
  from Xadega.helpers.PyroHelpers import ReplyCheck 
   
- from .help import add_command_help 
+ from Xadega.modules.bot import add_command_help
   
  commands = { 
      "ftyping": enums.ChatAction.TYPING, 
@@ -25,7 +26,7 @@ from asyncio import sleep
  } 
   
   
-@ubot.on_message(filters.command(list(commands), cmd) & filters.me) 
+@ubot.on_message(filters.command(list(commands), PREFIX) & filters.me) 
  async def fakeactions_handler(client, message: Message): 
      cmd = message.command[0] 
      try: 
