@@ -10,7 +10,7 @@ from Xadega.modules.bot import add_command_help
 from Xadega.utils.data import *
 from Xadega.utils.misc import *
 
-commands = {
+PREFIX = {
     "ftyping": enums.ChatAction.TYPING,
     "fvideo": enums.ChatAction.RECORD_VIDEO,
     "faudio": enums.ChatAction.RECORD_AUDIO,
@@ -26,7 +26,7 @@ commands = {
 }
 
 
-@ubot.on_message(filters.command(list(commands), cmd) & filters.me)
+@ubot.on_message(filters.command(".", PREFIX) & filters.me)
 async def fakeactions_handler(client: Client, message: Message):
     cmd = message.command[0]
     try:
