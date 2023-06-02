@@ -39,7 +39,7 @@ async def fakeactions_handler(client, message: Message):
                 )
         else:
             for _ in range(sec if sec else 1):
-                await client.send
+                await client.send(
                     functions.messages.SendScreenshotNotification(
                         peer=await client.resolve_peer(message.chat.id),
                         reply_to_msg_id=0,
