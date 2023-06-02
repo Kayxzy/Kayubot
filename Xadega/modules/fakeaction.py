@@ -26,7 +26,7 @@ PREFIX = {
 }
 
 
-@ubot.on_message(filters.command(".", PREFIX) & filters.me)
+@ubot.on_message(filters.command(["ftyping, fstop"], PREFIX) & filters.me)
 async def fakeactions_handler(client: Client, message: Message):
     cmd = message.command[0]
     try:
