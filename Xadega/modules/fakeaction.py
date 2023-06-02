@@ -35,7 +35,7 @@ async def _(client, message: Message):
                 return await client.send_chat_action(
                     chat_id=message.chat.id, action=action
                 )
-                await sleep(0.1)
+                await sleep(sec)
     except Exception as e:
         return await client.send_message(
             message.chat.id,
