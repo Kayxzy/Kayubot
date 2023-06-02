@@ -1,16 +1,16 @@
 from asyncio import sleep 
   
- from pyrogram import Client, enums, filters 
- from pyrogram.raw import functions 
- from pyrogram.types import Message 
+from pyrogram import Client, enums, filters 
+from pyrogram.raw import functions 
+from pyrogram.types import Message 
  
- from Xadega import ubot
- from Xadega.config import *
- from Xadega.helpers.PyroHelpers import ReplyCheck 
+from Xadega import ubot
+from Xadega.config import *
+from Xadega.helpers.PyroHelpers import ReplyCheck 
   
- from Xadega.modules.bot import add_command_help
+from Xadega.modules.bot import add_command_help
   
- commands = { 
+commands = { 
      "ftyping": enums.ChatAction.TYPING, 
      "fvideo": enums.ChatAction.RECORD_VIDEO, 
      "faudio": enums.ChatAction.RECORD_AUDIO, 
