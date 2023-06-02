@@ -1,4 +1,4 @@
-pyrogram import Client, enums
+from pyrogram import Client, enums
 from pyrogram.types import Message, User
 
 
