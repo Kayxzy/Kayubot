@@ -25,8 +25,8 @@ from asyncio import sleep
  } 
   
   
- @Client.on_message(filters.command(list(commands), cmd) & filters.me) 
- async def fakeactions_handler(client: Client, message: Message): 
+@ubot.on_message(filters.command(list(commands), cmd) & filters.me) 
+ async def fakeactions_handler(client, message: Message): 
      cmd = message.command[0] 
      try: 
          sec = int(message.command[1]) 
