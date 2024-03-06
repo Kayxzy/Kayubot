@@ -1,5 +1,5 @@
 python-dotenv
-pyrogram
+pyrogram==2.0.106
 TgCrypto
 motor
 pyromod==1.1
